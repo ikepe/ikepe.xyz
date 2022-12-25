@@ -23,11 +23,6 @@ footer {
   grid-template-columns: 1fr 1fr;
 }
 
-/**devices.html**/
-.device-block{
-  margin-left: 50px;
-}
-
 .mxgraph{
   width: 100%;
 }
@@ -54,6 +49,19 @@ footer {
     border-left: thick solid #585858;
     padding-left: 20px;
   }
+
+  /* devices */
+  .device-title {
+    margin-top: 30px;
+  }
+  /* .device-block{
+    margin-left: 5%;
+  }
+  .device-list {
+    margin-left: 20px;
+    border-left: thick solid #585858;
+    padding-left: 20px;
+  } */
 }
 
 /***mobile***/
@@ -75,5 +83,13 @@ footer {
   .prof-text {
     padding-left: 20px;
     margin:auto;
+  }
+
+  /* device */
+  .device-title {
+    margin-top: 30px;
+    margin-bottom: -10px;
+    margin-left: 30%;
+    text-align: auto;
   }
 }

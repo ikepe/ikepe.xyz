@@ -140,13 +140,12 @@ header {
 /***PC***/
 @media screen and (min-width:901px) {
     body {
-        padding-top: 8%;
+        padding-top: 5%;
     }
 
     /*背景部分*/
     header {
-        height: 8%;
-        opacity: 0.8;
+        height: 5%;
         padding: 15px 30px 15px 30px;
     }
 

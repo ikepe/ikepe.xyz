@@ -20,6 +20,10 @@ header {
     list-style: none;
 }
 
+.nav_li {
+    font-family: "M PLUS 1p";
+}
+
 /***mobile***/
 @media screen and (max-width:900px) {
     body {

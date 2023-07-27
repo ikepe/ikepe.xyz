@@ -15,7 +15,7 @@ footer {
 /*URLの下線を消し、黒字にする*/
 .URL {
   text-decoration: none;
-  color: black;
+  color: rgb(73, 73, 73);
 }
 
 .link {

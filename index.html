@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/button.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index-style.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
   <title>いけぺ～のホームページ</title>
   <link rel=”alternate” media=”only screen and (max-width: 640px)” href=”http://www.ikepe.xyz/s/” />
@@ -32,14 +33,19 @@
 <body>
   <div id="header"></div>
 
-  <div class="button">
-    <a href="profile.html" class="URL">🙋 profile</a>
-    <a href="devices.html" class="URL">🖥️ devices</a>
-    <a href="https://photos.ikepe.xyz" class="URL">📷 photos</a>
-    <a href="https://zenn.dev/ikepe" class="URL" target="_blank">📝 blog</a>
-    <a href="mailto:pe@ikepe.xyz" class="URL">✉ contact me</a>
-  </div>
+  <div id="top-content">
+    <div id="profile-container">
+      <img src="/photos/profile.jpg" alt="Profile Picture" id="profile-icon">
+      <!-- 画像の下にテキストを入れる場合は、ここに入れます。 -->
+    </div>
 
+    <div id="text-container">
+      <!-- テキスト内容 -->
+      <a href="https://hiroshima-cu.ac.jp" class="URL">所属 : 広島市立大学 情報科学研究科</a><br>
+      <a href="https://x.com/ikepe_main" class="URL">Twitter(X) : @ikepe_main</a><br>
+      <a href="https://github.com/ikepe" class="URL">GitHub : @ikepe</a>
+    </div>
+  </div>
 </body>
 
 </html>

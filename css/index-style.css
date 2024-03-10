@@ -20,6 +20,7 @@
   max-width: 100%;
   margin-right: 15px;
   height: auto;
+  border-radius: 10px;
 }
 
 #text-container {
@@ -29,34 +30,44 @@
 }
 
 /* 下部 */
-.bottom-content {
-  display: flex;
-  justify-content: space-between; /* 左右のコンテナ間にスペースを作る */
-  align-items: center; 
-  max-width: 1200px; /* または任意の最大幅 */
-  margin: auto; /* これにより、#content が画面中央に配置されます */
-  padding: 20px;
-}
 
-.profile-category {
-  width: 50%; /* または任意の幅で調整 */
-  text-align: right; /* テキストを右に配置 */
-}
 
-.category-text {
-  padding-right: 15px;
-  }
-
-.profile-text {
-  width: 50%; /* または任意の幅で調整 */
-  margin-left: 15px;
-  text-align: left; /* テキストを左に配置 */
-}
+.content {
+  margin-top: 20px;}
 
 /* PC用スタイル */
 @media screen and (min-width:901px) {
   #profile-icon {
     width: 300px; /* 最大幅を設定 */
+  }
+
+  .bottom-content {
+    display: flex;
+    justify-content: space-between; /* 左右のコンテナ間にスペースを作る */
+    align-items: center; 
+    max-width: 1200px; /* または任意の最大幅 */
+    margin: auto; /* これにより、#content が画面中央に配置されます */
+    padding: 20px;
+    align-items: flex-start; /* 子要素を上に揃えます */
+  }
+
+  .category-text {
+    padding-right: 50px;
+    }
+  
+  .profile-text {
+    width: 50%; /* または任意の幅で調整 */
+    margin-left: 10px;
+    text-align: left; /* テキストを左に配置 */
+  }
+
+  .profile-category {
+    width: 50%; /* または任意の幅で調整 */
+    text-align: right; /* テキストを右に配置 */
+  }
+
+  p {
+    margin : 5px;
   }
 }
 
@@ -64,5 +75,35 @@
 @media screen and (max-width:900px) {
   #profile-icon {
     width: 150px; /* 最大幅を設定 */
+  }
+
+  .bottom-content {
+    justify-content: space-between; /* 左右のコンテナ間にスペースを作る */
+    align-items: center; 
+    max-width: 1200px; /* または任意の最大幅 */
+    margin: auto; /* これにより、#content が画面中央に配置されます */
+    padding: 20px;
+    align-items: flex-start; /* 子要素を上に揃えます */
+  }
+
+  h2 {
+    font-size: 18px;}
+
+  .category-text {
+    padding-right: 5px;
+  }
+
+  .profile-text {
+    margin-left: 15px;
+    text-align: left; /* テキストを左に配置 */
+  }
+
+  .profile-category {
+    text-align: left; /* テキストを右に配置 */
+  }
+
+  p {
+    font-size: 15px;
+    margin : 5px;
   }
 }

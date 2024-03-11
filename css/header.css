@@ -26,10 +26,6 @@ header {
 
 /***mobile***/
 @media screen and (max-width:900px) {
-    body {
-        /*ヘッダーと被るのを防ぐためにずらす*/
-        margin-top: 20%;
-    }
 
     /*背景部分*/
     header {
@@ -139,9 +135,7 @@ header {
 
 /***PC***/
 @media screen and (min-width:901px) {
-    body {
-        padding-top: 5%;
-    }
+
 
     /*背景部分*/
     header {

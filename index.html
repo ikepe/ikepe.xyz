@@ -35,7 +35,7 @@
 
   <div id="top-content">
     <div id="icon-container">
-      <img src="/photos/profile.jpg" alt="Profile Picture" id="profile-icon">
+      <img src="/photos/profile.jpg" alt="Profile Picture" id="profile-icon" oncontextmenu="return false;">
       <!-- 画像の下にテキストを入れる場合は、ここに入れます。 -->
     </div>
 
@@ -91,6 +91,19 @@
       <div class="content">
         <a href="https://ichipiro.net/" class="URL">いちぴろ・エクスプローラ (技術系サークル)</a>
       </div>
+
+      <div class="profile-category, content" id="past-affiliation-header">
+        <p class="category-text">▶︎過去の所属</p>
+      </div>
+      <div class="profile-text" id="past-affiliation-content" style="display: none;">
+        <!-- ここに過去の所属のコンテンツを入れる -->
+        <div class="content">水泳部</div>
+        <div class="content">マスコミ研究会</div>
+        <div class="content">大学祭実行委員会 システム局</div>
+        <div class="content">プログラミング同好会</div>
+        <!-- その他の所属内容... -->
+      </div>
+
     </div>
   </div>
 
@@ -167,7 +180,7 @@
     </div>
   </div>
 
-
+  <script src="js/toggle.js"></script>
 </body>
 
 </html>

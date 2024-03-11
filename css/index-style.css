@@ -104,7 +104,8 @@
   }
 
   #text-container {
-    text-align: center; /* テキストを中央揃えに */
+    max-width: 65%;
+    text-align: left; /* テキストを左揃えに */
     padding: 0; /* パディングをリセット */
   }
 

@@ -104,7 +104,7 @@
   }
 
   #text-container {
-    max-width: 65%;
+    max-width: 75%;
     text-align: left; /* テキストを左揃えに */
     padding: 0; /* パディングをリセット */
   }

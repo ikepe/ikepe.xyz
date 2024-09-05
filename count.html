@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>文字数カウント</title>
+  <!--favicon-->
+  <link rel="icon" href="icon/favicon.ico" sizes="128*128">
+  <style>
+    #count {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>文字数カウンター</h1>
+  <textarea id="text" rows="10" cols="30" placeholder="ここにテキストを入力してください"></textarea>
+  <div id="count">
+    <p>文字数: <span id="withoutNewlines">0</span></p>
+    <p>文字数(改行込): <span id="withNewlines">0</span></p>
+  </div>
+  <script src="js/count.js"></script>
+</body>
+
+</html>

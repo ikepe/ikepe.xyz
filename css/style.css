@@ -93,3 +93,48 @@ footer {
     text-align: auto;
   }
 }
+
+/* 翻訳フローティングボタン */
+#translate-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+#translate-btn {
+  width: 52px;
+  height: 52px;
+  background: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#translate-btn:hover {
+  background: #2b6fd9;
+}
+
+#google_translate_element {
+  display: none;
+  background: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+#google_translate_element.active {
+  display: block;
+}

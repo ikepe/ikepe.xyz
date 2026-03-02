@@ -100,7 +100,24 @@
     </div>
 
   </div>
-
+  <!-- Google翻訳フローティングボタン -->
+  <div id="translate-container">
+    <div id="google_translate_element"></div>
+    <button id="translate-btn" onclick="toggleTranslate()" title="翻訳 / Translate">🌐</button>
+  </div>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ja',
+        includedLanguages: 'en,zh-CN,zh-TW,ko,fr,de,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+    function toggleTranslate() {
+      document.getElementById('google_translate_element').classList.toggle('active');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

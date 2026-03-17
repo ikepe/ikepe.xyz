@@ -1,0 +1,170 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import HeroProfile from "../components/HeroProfile.astro";
+import SectionBlock from "../components/SectionBlock.astro";
+import TranslateWidget from "../components/TranslateWidget.astro";
+
+const quickLinks = [
+  {
+    icon: "/icon/school.png",
+    label: "広島市立大学 情報科学研究科",
+    href: "https://hiroshima-cu.ac.jp"
+  },
+  {
+    icon: "/icon/twitter.png",
+    label: "@ikepe_main",
+    href: "https://x.com/ikepe_main"
+  },
+  {
+    icon: "/icon/github.png",
+    label: "@ikepe",
+    href: "https://github.com/ikepe"
+  }
+];
+
+const affiliations = [
+  {
+    date: "2024年4月〜",
+    title: "広島市立大学 情報科学研究科 情報工学専攻",
+    href: "https://hiroshima-cu.ac.jp"
+  },
+  {
+    date: "2022年10月〜",
+    title: "先端ネットワークセキュリティ研究グループ"
+  },
+  {
+    date: "2020年4月〜2024年3月",
+    title: "広島市立大学 情報科学部 情報工学科",
+    href: "https://hiroshima-cu.ac.jp"
+  }
+];
+
+const clubs = [
+  { title: "天地創造部", href: "https://tenchisouzou.github.io/" },
+  { title: "写真部", href: "https://www.instagram.com/hcu_photography/" },
+  { title: "いちぴろ・エクスプローラ (技術系サークル)", href: "https://ichipiro.net/" }
+];
+
+const pastAffiliations = ["水泳部", "マスコミ研究会", "大学祭実行委員会 システム局", "プログラミング同好会"];
+
+const certifications = [
+  { date: "2025年10月", title: "情報処理安全確保支援士試験 合格(未登録)" },
+  { date: "2023年10月", title: "応用情報技術者試験" },
+  { date: "2021年10月", title: "基本情報技術者試験" }
+];
+
+const activities = [
+  { date: "2026年3月", title: "Global Cybersecurity Camp (GCC) 2026 Vietnam" },
+  { date: "2026年2月", title: "CyberTAMAGO vol.4" },
+  { date: "2026年2月", title: "JANOG 57 若者支援プログラム" },
+  { date: "2025年11月", title: "CODE BLUE 2025 学生スタッフ" },
+  { date: "2025年8月", title: "セキュリティ・キャンプ ミニ (東京開催) 講師" },
+  { date: "2025年8月", title: "セキュリティ・キャンプ 全国大会 NOCチューター" },
+  { date: "2024年11月", title: "CODE BLUE 2024 学生スタッフ" },
+  { date: "2024年10月", title: "マルウェア対策研究人材育成ワークショップ(MWS) 2024" },
+  { date: "2024年8月", title: "P3NFEST 2024 Summer" },
+  { date: "2024年8月", title: "セキュリティ・ミニキャンプ in 広島" },
+  { date: "2024年8月", title: "セキュリティ・キャンプ2024 A:IoT (チューター)" },
+  { date: "2024年4月", title: "GMO DevSecOpsThon" },
+  { date: "2024年3月", title: "セキュリティ・ミニキャンプ in大阪 (チューター)" },
+  { date: "2023年8月〜2024年3月", title: "広島地域IPv6推進委員会 IPv6勉強会" },
+  { date: "2024年2月", title: "P3NFEST" },
+  { date: "2023年11月", title: "セキュリティ・ミニキャンプ in 広島" },
+  { date: "2023年10月", title: "マルウェア対策研究人材育成ワークショップ(MWS) 2023" },
+  { date: "2023年8月", title: "セキュリティ・キャンプ2023 A:IoT" }
+];
+
+const accounts = [
+  { label: "𝕏 (Twitter)", value: "@ikepe_main", href: "https://x.com/ikepe_main" },
+  { label: "LinkedIn", value: "@ikepe", href: "https://www.linkedin.com/in/ikepe" },
+  { label: "メール", value: "pe@ikepe.xyz", href: "mailto:pe@ikepe.xyz" },
+  { label: "GitHub", value: "@ikepe", href: "https://github.com/ikepe" },
+  { label: "Misskey", value: "@ikepe@mi.ikepe.xyz", href: "https://mi.ikepe.xyz/@ikepe" },
+  { label: "Discord", value: "@ikepe", href: "https://discordapp.com/users/727549769098068050" },
+  { label: "Instagram", value: "@ikepe.xyz", href: "https://instagram.com/ikepe.xyz" },
+  { label: "Zenn", value: "@ikepe", href: "https://zenn.dev/ikepe" }
+];
+---
+
+<BaseLayout>
+  <SiteHeader />
+
+  <main>
+    <HeroProfile quickLinks={quickLinks} />
+
+    <div class="section-stack">
+      <SectionBlock title="所属">
+        <div class="entry-grid">
+          {affiliations.map((item) => (
+            <article class="entry-card">
+              <div class="entry-card__date">{item.date}</div>
+              <div class="entry-card__title">
+                {item.href ? (
+                  <a href={item.href} target="_blank" rel="noreferrer">{item.title}</a>
+                ) : (
+                  item.title
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </SectionBlock>
+
+      <SectionBlock title="クラブ / サークル">
+        <div class="link-list">
+          {clubs.map((club) => (
+            <a class="link-pill" href={club.href} target="_blank" rel="noreferrer">{club.title}</a>
+          ))}
+        </div>
+
+        <details class="detail-toggle">
+          <summary>過去の所属</summary>
+          <div class="detail-toggle__body">
+            <div class="simple-chip-list">
+              {pastAffiliations.map((name) => (
+                <span class="simple-chip">{name}</span>
+              ))}
+            </div>
+          </div>
+        </details>
+      </SectionBlock>
+
+      <SectionBlock title="資格">
+        <div class="entry-grid">
+          {certifications.map((item) => (
+            <article class="entry-card">
+              <div class="entry-card__date">{item.date}</div>
+              <div class="entry-card__title">{item.title}</div>
+            </article>
+          ))}
+        </div>
+      </SectionBlock>
+
+      <SectionBlock title="参加歴">
+        <div class="entry-grid">
+          {activities.map((item) => (
+            <article class="entry-card">
+              <div class="entry-card__date">{item.date}</div>
+              <div class="entry-card__title">{item.title}</div>
+            </article>
+          ))}
+        </div>
+      </SectionBlock>
+
+      <SectionBlock title="アカウント">
+        <div class="account-grid">
+          {accounts.map((account) => (
+            <a class="link-pill" href={account.href} target="_blank" rel="noreferrer">
+              <span>{account.label} : {account.value}</span>
+            </a>
+          ))}
+        </div>
+      </SectionBlock>
+    </div>
+
+    <p class="footer-note">Astro で再構成し、白ベースのまま余白・可読性・読み込み効率を改善しています。</p>
+  </main>
+
+  <TranslateWidget />
+</BaseLayout>

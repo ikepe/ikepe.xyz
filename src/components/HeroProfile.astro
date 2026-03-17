@@ -1,0 +1,34 @@
+---
+const { quickLinks = [] } = Astro.props;
+---
+
+<section class="hero-card">
+  <div class="hero-card__media">
+    <div class="hero-card__image-wrap">
+      <img
+        src="/photos/profile.jpg"
+        alt="いけぺ～のプロフィール画像"
+        width="1079"
+        height="1079"
+        decoding="async"
+      />
+    </div>
+  </div>
+
+  <div class="hero-card__body">
+    <p class="eyebrow">Profile</p>
+    <h1>研究とインフラとセキュリティの個人サイト</h1>
+    <p class="hero-copy">
+      広島市立大学で情報工学を学びつつ、ネットワーク、運用、セキュリティ周辺の活動をまとめています。
+    </p>
+
+    <div class="hero-links" aria-label="主要リンク">
+      {quickLinks.map((link) => (
+        <a class="hero-link" href={link.href} target="_blank" rel="noreferrer">
+          <img src={link.icon} alt="" width="20" height="20" loading="lazy" decoding="async" />
+          <span>{link.label}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

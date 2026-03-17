@@ -1,0 +1,44 @@
+<div class="translate-widget">
+  <div id="google_translate_element" class="translate-widget__panel"></div>
+  <button id="translate-trigger" class="translate-widget__button" type="button">
+    翻訳
+  </button>
+</div>
+
+<script>
+  const trigger = document.getElementById("translate-trigger");
+  const panel = document.getElementById("google_translate_element");
+  let loaded = false;
+
+  function bootTranslate() {
+    if (loaded) {
+      return;
+    }
+
+    loaded = true;
+
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "ja",
+          includedLanguages: "en,zh-CN,zh-TW,ko,fr,de,es",
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        "google_translate_element"
+      );
+    };
+
+    const script = document.createElement("script");
+    script.src =
+      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
+  trigger?.addEventListener("click", () => {
+    panel?.classList.toggle("is-open");
+    if (panel?.classList.contains("is-open")) {
+      bootTranslate();
+    }
+  });
+</script>

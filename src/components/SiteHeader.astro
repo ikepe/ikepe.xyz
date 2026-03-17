@@ -1,0 +1,38 @@
+---
+const navItems = [
+  { href: "/devices.html", label: "Devices" },
+  { href: "https://status.ikepe.xyz", label: "Status", external: true },
+  { href: "https://zenn.dev/ikepe", label: "Blog", external: true },
+  { href: "https://photos.ikepe.xyz", label: "Photos", external: true }
+];
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="/">いけぺ～のホームページ</a>
+
+    <details class="site-nav">
+      <summary aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </summary>
+
+      <nav aria-label="主要ナビゲーション">
+        <ul class="site-nav__list">
+          {navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noreferrer" : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
